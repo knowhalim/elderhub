@@ -109,6 +109,7 @@ $(document).ready(function() {
     // Bind event handlers
     function bindEvents() {
         // Welcome screen
+        $('#intro-video-btn').on('click', startCourse);
         $('#start-course-btn').on('click', startCourse);
         $('#preview-course-btn').on('click', previewCourse);
 
