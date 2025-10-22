@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Computer Learning - Premium Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Senior Learning</h1>
+                    <p>Computer Skills Course</p>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="progress-indicator">
+                    <span class="progress-text">Progress: <span id="progress-percentage">0%</span></span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <button class="help-btn" id="help-btn">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content-area">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="welcome-container">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <!-- Left Column - Banner -->
+                    <div class="hero-banner">
+                        <div class="banner-card">
+                            <div class="banner-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/1.jpg" alt="Senior Learning Computer Course" class="course-image">
+                            </div>
+                            <div class="banner-content">
+                                <h3 class="banner-title">Free Computer Course for Seniors</h3>
+                                <button class="banner-btn" id="intro-video-btn">
+                                    <i class="fas fa-play"></i>
+                                    <span>Learn at Your Own Pace!</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Content -->
+                    <div class="hero-content">
+                        <div class="welcome-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Premium Course</span>
+                        </div>
+                        
+                        <h1 class="hero-title">Master Computer Skills</h1>
+                        <h2 class="hero-subtitle">Designed Specifically for Seniors</h2>
+                        
+                        <p class="hero-description">
+                            Learn essential computer skills at your own pace with our comprehensive, 
+                            patient approach designed for mature learners. No prior experience required.
+                        </p>
+                        
+                        <div class="course-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Self-paced learning</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Safe & secure</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <span>Expert guidance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <button class="btn-primary" id="start-course-btn">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Begin Learning</span>
+                            </button>
+                            <button class="btn-secondary" id="preview-course-btn">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview Course</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Modules Section -->
+                <div class="course-modules-section">
+                    <div class="section-header">
+                        <h2>What You'll Learn</h2>
+                        <p>8 comprehensive lessons designed specifically for seniors</p>
+                    </div>
+                    
+                    <div class="modules-grid">
+                        <div class="module-card" data-module="1">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/2.jpg" alt="Introduction to Computers" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h3>Introduction to Computers</h3>
+                                <p>Understanding what computers are and how they work</p>
+                                <div class="module-meta">
+                                    <span class="duration">15 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="2">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/3.jpg" alt="Mouse Skills" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-mouse"></i>
+                                </div>
+                                <h3>Mouse Skills</h3>
+                                <p>Learning to navigate and click with confidence</p>
+                                <div class="module-meta">
+                                    <span class="duration">12 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="3">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/4.jpg" alt="Keyboard Basics" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                                <h3>Keyboard Basics</h3>
+                                <p>Typing letters, numbers, and basic commands</p>
+                                <div class="module-meta">
+                                    <span class="duration">18 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="4">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/ExerciseQuiz.jpg" alt="Practice Session" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <h3>Practice Session</h3>
+                                <p>Interactive exercises to reinforce learning</p>
+                                <div class="module-meta">
+                                    <span class="duration">20 min</span>
+                                    <span class="difficulty">Practice</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="5">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/5.jpg" alt="Desktop Navigation" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <h3>Desktop Navigation</h3>
+                                <p>Understanding icons, menus, and programs</p>
+                                <div class="module-meta">
+                                    <span class="duration">16 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="6">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/6.jpg" alt="File Management" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-folder"></i>
+                                </div>
+                                <h3>File Management</h3>
+                                <p>Saving, organizing, and finding your files</p>
+                                <div class="module-meta">
+                                    <span class="duration">14 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="7">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/7.jpg" alt="Internet & Email" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h3>Internet & Email</h3>
+                                <p>Safe browsing and communication online</p>
+                                <div class="module-meta">
+                                    <span class="duration">22 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module-card" data-module="8">
+                            <div class="module-image">
+                                <img src="https://cdn1.sharemyimage.com/smi/2025/10/21/8.jpg" alt="Safe Shutdown" class="module-img">
+                            </div>
+                            <div class="module-content">
+                                <div class="module-icon">
+                                    <i class="fas fa-power-off"></i>
+                                </div>
+                                <h3>Safe Shutdown</h3>
+                                <p>Properly turning off your computer</p>
+                                <div class="module-meta">
+                                    <span class="duration">8 min</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Screen -->
+        <section id="lesson-screen" class="screen">
+            <div class="lesson-container">
+                <div class="lesson-header">
+                    <div class="lesson-info">
+                        <div class="lesson-number">
+                            <span id="current-lesson-num">1</span>
+                        </div>
+                        <div class="lesson-details">
+                            <h1 id="current-lesson-title">Introduction to Computers</h1>
+                            <p id="current-lesson-subtitle">Understanding what computers are and how they work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-controls">
+                        <button class="control-btn" id="prev-lesson-btn" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                            <span>Previous</span>
+                        </button>
+                        <button class="control-btn" id="next-lesson-btn">
+                            <span>Next</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lesson-content">
+                    <div class="video-section">
+                        <div class="video-container">
+                            <iframe id="lesson-video" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-info-section">
+                        <div class="info-card">
+                            <h3>What You'll Learn</h3>
+                            <p id="lesson-description">
+                                In this lesson, you'll discover what computers are, how they work, 
+                                and how they can make your daily life easier and more convenient.
+                            </p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>Key Points</h3>
+                            <ul id="lesson-key-points">
+                                <li>Understanding computer components</li>
+                                <li>How computers process information</li>
+                                <li>Benefits of using computers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Screen -->
+        <section id="practice-screen" class="screen">
+            <div class="practice-container">
+                <div class="practice-header">
+                    <div class="practice-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="practice-info">
+                        <h1>Practice Session</h1>
+                        <p>Reinforce your learning with interactive exercises</p>
+                    </div>
+                </div>
+                
+                <div class="practice-content">
+                    <div class="practice-card">
+                        <h3>Interactive Exercises</h3>
+                        <p>
+                            Click the button below to access our practice platform. 
+                            These exercises will help you master the skills you've learned.
+                        </p>
+                        
+                        <div class="practice-actions">
+                            <button class="btn-primary" id="open-practice-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Open Practice Platform</span>
+                            </button>
+                            
+                            <button class="btn-secondary" id="continue-course-btn">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Continue Course</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Completion Screen -->
+        <section id="completion-screen" class="screen">
+            <div class="completion-container">
+                <div class="completion-header">
+                    <div class="completion-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h1>Congratulations!</h1>
+                    <p>You've successfully completed the Senior Computer Skills Course</p>
+                </div>
+                
+                <div class="completion-content">
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <i class="fas fa-desktop"></i>
+                            <h3>Computer Basics</h3>
+                            <p>Mastered</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-mouse"></i>
+                            <h3>Mouse Skills</h3>
+                            <p>Mastered</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-keyboard"></i>
+                            <h3>Keyboard Skills</h3>
+                            <p>Mastered</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-globe"></i>
+                            <h3>Internet Safety</h3>
+                            <p>Mastered</p>
+                        </div>
+                    </div>
+                    
+                    <div class="completion-message">
+                        <h3>What's Next?</h3>
+                        <p>
+                            You now have the essential computer skills to navigate the digital world with confidence. 
+                            Keep practicing and exploring - you're ready for anything!
+                        </p>
+                    </div>
+                    
+                    <div class="completion-actions">
+                        <button class="btn-primary" id="restart-course-btn">
+                            <i class="fas fa-redo"></i>
+                            <span>Take Course Again</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="help-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Need Help?</h2>
+                <button class="modal-close" id="close-help-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="help-content">
+                    <div class="help-section">
+                        <h3><i class="fas fa-play-circle"></i> Watching Videos</h3>
+                        <p>Videos play automatically when you start a lesson. You can pause, rewind, or watch them multiple times.</p>
+                    </div>
+                    <div class="help-section">
+                        <h3><i class="fas fa-arrow-right"></i> Navigation</h3>
+                        <p>Use the Previous/Next buttons or click any module card to navigate between lessons.</p>
+                    </div>
+                    <div class="help-section">
+                        <h3><i class="fas fa-external-link-alt"></i> Practice Platform</h3>
+                        <p>Practice exercises open in a new window. Close that window when finished to return to the course.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
