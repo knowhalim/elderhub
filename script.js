@@ -44,7 +44,7 @@ $(document).ready(function() {
             id: 5,
             title: "Desktop Navigation",
             subtitle: "Understanding icons, menus, and programs",
-            videoId: "A2dQ-1w0oNk",
+            videoId: "ioXRs1gQ_bM",
             description: "Navigate your computer's desktop environment, understand icons, and learn to open and close programs.",
             keyPoints: [
                 "Understanding desktop icons",
@@ -70,7 +70,7 @@ $(document).ready(function() {
             id: 7,
             title: "Internet & Email",
             subtitle: "Safe browsing and communication online",
-            videoId: "hGPKRwBBAxg",
+            videoId: "Efx8SB1IyxY",
             description: "Discover the internet safely, learn to browse websites, and communicate through email.",
             keyPoints: [
                 "Safe internet browsing",
@@ -83,7 +83,7 @@ $(document).ready(function() {
             id: 8,
             title: "Safe Shutdown",
             subtitle: "Properly turning off your computer",
-            videoId: "lKN3VKSueWo",
+            videoId: "GIkwkBJk8UQ",
             description: "Learn the proper way to shut down your computer to protect your files and maintain system health.",
             keyPoints: [
                 "Why proper shutdown matters",
