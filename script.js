@@ -41,7 +41,7 @@ $(document).ready(function() {
             ]
         },
         {
-            id: 5,
+            id: 4,
             title: "Desktop Navigation",
             subtitle: "Understanding icons, menus, and programs",
             videoId: "ioXRs1gQ_bM",
@@ -54,7 +54,7 @@ $(document).ready(function() {
             ]
         },
         {
-            id: 6,
+            id: 5,
             title: "File Management",
             subtitle: "Saving, organizing, and finding your files",
             videoId: "m1F3F-_z36M",
@@ -67,7 +67,7 @@ $(document).ready(function() {
             ]
         },
         {
-            id: 7,
+            id: 6,
             title: "Internet & Email",
             subtitle: "Safe browsing and communication online",
             videoId: "Efx8SB1IyxY",
@@ -80,7 +80,7 @@ $(document).ready(function() {
             ]
         },
         {
-            id: 8,
+            id: 7,
             title: "Safe Shutdown",
             subtitle: "Properly turning off your computer",
             videoId: "GIkwkBJk8UQ",
@@ -141,7 +141,7 @@ $(document).ready(function() {
         // Module navigation - Click on module cards
         $('.module-card').on('click', function() {
             const moduleId = $(this).data('module');
-            if (moduleId === 4) {
+            if (moduleId === 'practice') {
                 showPracticeScreen();
             } else {
                 const lessonIndex = courseData.findIndex(lesson => lesson.id === moduleId);
@@ -164,6 +164,13 @@ $(document).ready(function() {
                 nextLesson();
             }
         });
+    }
+
+    // Show welcome screen
+    function showWelcomeScreen() {
+        $('.screen').removeClass('active');
+        $('#welcome-screen').addClass('active');
+        isPracticeScreen = false;
     }
 
     // Start the course
@@ -283,7 +290,7 @@ $(document).ready(function() {
         $('.screen').removeClass('active');
         $('#practice-screen').addClass('active');
         isPracticeScreen = true;
-        updateModuleCards(4);
+        updateModuleCards('practice');
         trackProgress('practice_viewed');
     }
 
@@ -296,7 +303,7 @@ $(document).ready(function() {
 
     // Continue after practice
     function continueAfterPractice() {
-        currentLesson = 3; // Continue to desktop navigation (module 5 at index 3)
+        currentLesson = 3; // Continue to module 4 (Desktop Navigation) at array index 3
         showLesson(currentLesson);
     }
 
