@@ -296,7 +296,7 @@ $(document).ready(function() {
 
     // Continue after practice
     function continueAfterPractice() {
-        currentLesson = 4; // Skip to desktop navigation
+        currentLesson = 3; // Continue to desktop navigation (module 5 at index 3)
         showLesson(currentLesson);
     }
 
